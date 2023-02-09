@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test3.html</title>
+<style type="text/css">
+#box1{
+	width:200px; height:200px;
+	background-color: #E8D9FF;
+	/* 밖여백 픽셀, 백분율, auto 자동계산  */
+	/* 마진 중첩 : 밖여백 겹쳐질 때 */
+	margin: 50px;
+	/* 위아래 왼쪽오른쪽 */
+	margin: 10px 50px;
+	/* 위 오른쪽 아래 왼쪽  */
+	margin: 10px 20px 30px 40px;
+	margin-top: 10px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+	margin-left: 40px;
+	
+	/* 밖여백 이용 가운데 정렬 
+	   auto 왼쪽,오른쪽 일정간격 계산 여백 */
+	margin: 50px auto;
+	/* 안여백  */
+	padding: 10px;
+	padding: 10px 20px;
+	padding: 10px 20px 30px;
+	
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+	padding-left: 40px;
+}
+#box2{
+	width:200px; height:250px;
+	background-color: #D1B2FF;
+	/* 밖여백 픽셀, 백분율, auto 자동계산  */
+	margin: 50px;
+	margin: 10px 50px;
+	margin: 10px 20px 30px 40px;
+	margin: 50px auto;
+	
+}
+#box3{
+	width:250px; height:200px;
+	background-color: #DAD9FF;
+	/* 밖여백 픽셀, 백분율, auto 자동계산  */
+	margin: 50px;
+	margin: 10px 50px;
+	margin: 10px 20px 30px 40px;
+	margin: 50px auto;
+}
+
+
+</style>
+</head>
+
+<body>
+<div id="box1">"#E8D9FF" 연한보라색</div>
+<div id="box2">"#D1B2FF" 진한보라색</div>
+<div id="box3">"#DAD9FF" 보라회색?</div>
+</body>
+</html>

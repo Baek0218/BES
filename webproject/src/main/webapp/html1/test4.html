@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html1/test4.html</title>
+</head>
+<body>
+	<h1>표만들기(2행 2열)</h1>
+	<!-- <table> 표만들기.</table> -->
+	<table border="1">
+		<!-- <table border="1"> 디자인에서 하지만, 개발에서도 가능. border이 표 모양. -->
+		<caption>표 제목</caption>
+		<!-- =>문단의 제목이 아니고 표의 제목이다.각각의 행,열의 제목도 줄 수 있음. -->
+		<!-- <tr></tr> 테이블 행 , <td></td> 테이블 데이터-tr안에 들어가있어야함. -->
+		<!-- <th></th> : 진하게 가운데 정렬 -->
+		<tr>
+			<td>1행1열</td>
+			<td>1행2열</td>
+		</tr>
+		<tr>
+			<td>2행1열</td>
+			<td>2행2열</td>
+		</tr>
+	</table>
+
+	<!-- 실습 -->
+	<h1>표만들기(5행 4열)</h1>
+	<table border="1">
+		<caption>선물용과 가정용 상품 구성</caption>
+		<tr>
+			<th>용도</th>
+			<th>중량</th>
+			<th>갯수</th>
+			<th>가격</th>
+		</tr>
+		<tr>
+			<td>선물용</td>
+			<td>3kg</td>
+			<td>11~16과</td>
+			<td>35,000원</td>
+		</tr>
+		<tr>
+			<td>선물용</td>
+			<td>5kg</td>
+			<td>18~26과</td>
+			<td>52,000원</td>
+		</tr>
+		<tr>
+			<td>가정용</td>
+			<td>3kg</td>
+			<td>11~16과</td>
+			<td>35,000원</td>
+		</tr>
+		<tr>
+			<td>가정용</td>
+			<td>5kg</td>
+			<td>18~26과</td>
+			<td>47,000원</td>
+		</tr>
+	</table>
+
+	<!-- 실습 : 표만들기(3행 3열) => 행, 열 합치기 -->
+	<!-- 합칠때는 합치고자 하는 열,행만 나두고 지운다. td rowspan="2" -> 행을 2개 합쳤다. -->
+	<!-- td colspan="2" -> 열을 2개 합쳤다 -->
+	<h1>표만들기(3행 3열) => 행, 열 합치기</h1>
+	<table border="1">
+		<caption>표 제목</caption>
+		<tr>
+			<td>1행1열</td>
+			<td colspan="2">1행2열</td>
+		</tr>
+		<tr>
+			<td rowspan="2">2행1열</td>
+			<td>2행2열</td>
+			<td>2행3열</td>
+		</tr>
+		<tr>
+			<td>3행2열</td>
+			<td>3행3열</td>
+		</tr>
+	</table>
+
+
+	<!-- 열에 스타일 적용 ↓  -->
+<!-- <colgroup> -->
+<!-- 	<col style="background-color: purple;"> -->
+
+<!-- 실습 : 표만들기(5행 4열) => 행, 열 합치기 -->
+<!-- 선물용,가정용 행 2개씩 합치고 중량,갯수,가격 제목 3칸 한꺼번에 합치기. -->
+<h1>표만들기(5행 4열)=> 행, 열 합치기</h1>
+	<table border="1">
+		<caption>선물용과 가정용 상품 구성</caption>
+		<colgroup>
+			<col style="background-color: purple;">
+			<col>
+			<col style="background-color: pink;">
+			<col>
+		</colgroup>
+		<tr>
+			<th>용도</th>
+			<th colspan="3">중량 갯수 가격</th>
+		<tr>
+			<td rowspan="2">선물용</td>
+			<td>3kg</td>
+			<td>11~16과</td>
+			<td>35,000원</td>
+		</tr>
+		<tr>
+			<td>5kg</td>
+			<td>18~26과</td>
+			<td>52,000원</td>
+		</tr>
+		<tr>
+			<td rowspan="2">가정용</td>
+			<td>3kg</td>
+			<td>11~16과</td>
+			<td>35,000원</td>
+		</tr>
+		<tr>
+			<td>5kg</td>
+			<td>18~26과</td>
+			<td>47,000원</td>
+		</tr>
+	</table>
+
+
+</body>
+</html>

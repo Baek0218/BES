@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>입력양식</title>
+</head>
+<body>
+<h1>입력 양식</h1>
+<!-- 입력 양식(폼)태크 : 사용자가 입력할 수 있게 만드는 태그 
+폼안에 입력한 내용을 가지고 action연결페이지로 이동
+입력한 데이터를 들고가는 방식 method get,post
+http://localhost:8080/webproject/html1/ex1.html?id=kim
+get방식 : 주소줄에 보이면서 id=kim 이름=값 데이터 전달(ex1.html = method).가장 많이 사용.
+post방식 : 주소줄에 안보이면서 데이터 전달.
+-->
+
+
+<!--  <form action="../html1/ex1.html" method="get"> 
+get 방식 : 주소줄에 보이면서 id=kim 이름=값 데이터 전달.가장 많이 사용,기본방식 -->
+
+<!-- 아이디 : <input type="text" name="id" value="kim"><br>
+<input type="submit" value="전송버튼">
+target="_blank" : 새창으로 연다 lavel : 아이디,비밀번호 꾸밀수있는 스타일 적용.
+radio : 입력X,선택O, name = 이름이 같을때는 남,여 묶어져 있는거고, 다를때는 묶지 않는다.
+</form>-->
+
+<!-- post 방식 : 주소줄에  안보이면서 데이터 전달. 특이한 경우 사용.비밀번호 포함. -->
+<form action="../html1/ex1.html" method="post" target="_blank">
+<fieldset> <!-- 영역지정태그 -->
+<legend>필수입력사항</legend>
+<label>아이디 :</label> <input type="text" name="id" value="kim"><br>
+<!-- label도 영역지정 태그 -->
+<label>비밀번호 :</label> <input type="password" name="pass" value="123"><br>
+</fieldset>
+
+<fieldset>
+<legend>선택사항</legend>
+
+<label>성별 :</label> <!-- radio : 둘중에 하나 선택할수 있는것. -->
+<input type="radio" name="ra" value="남">남
+<input type="radio" name="ra" value="여">여<br>
+<!-- radio : 입력X,선택O, name = 이름이 같을때는 남,여 묶어져 있는거고, 다를때는 묶지 않는다. -->
+
+<label>취미 :</label> 
+<input type="checkbox" name="ch" value="여행">여행
+<input type="checkbox" name="ch" value="게임">게임<br>
+<!-- checkbox = ? -->
+<!-- 둘다 선택가능. -->
+
+<label>등급 :</label>
+<select name ="se"> <!-- select 전체 이름설정,value값은 하나선택 설정가능. -->
+	<option value="1">목록1</option>
+	<option value="2">목록2</option>
+	<option value="3">목록3</option>
+</select><br>
+
+<label>자기소개 : </label>	
+<textarea rows="10" cols="20" name="ta">값</textarea>	
+</fieldset>
+<input type="submit" value="전송버튼"> <!-- 기능이 들어있는 버튼모양. -->
+</form>
+</body>
+</html>

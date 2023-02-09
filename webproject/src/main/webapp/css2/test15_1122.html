@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test15.html</title>
+<style type="text/css">
+/* 가상요소 => 스타일 추가
+ ::first-line , :: first-letter 
+ ::before,    ::after*/
+ 
+ /* after -> 뒤에 스타일을 적용시킨다. */
+ 
+ li.new::after { 
+ 		content: "NEW!!";
+ 		margin: 0px 10px;
+ 		color: white;
+ 		background-color: red;
+ 		font-size: x-small;
+ }
+</style>
+</head>
+<body>
+<ul>
+	<li class="new">제품 A</li>
+	<li>제품 B</li>
+	<li>제품 C</li>
+	<li class="new">제품 D</li>
+</ul>
+</body>
+</html>

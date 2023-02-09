@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test5.html</title>
+<!--body태그 글자크기 20px/h1태그 글꼴 바탕, 글자크기 3em/
+class=accent 글자크기 150%,글자굵기 800,class=italic 글자 스타일 italic  -->
+
+<!--글자색:영문글자색, RGB(Red Green Blue)색상표 => 16진수,10진수 표현 -->
+
+<!--16(10 11 12 13 14 15)의자리 1의자리 ff  -->
+<!--16(a  b  c  d   e  f)의자리 1의자리 ff
+		=>f(15)*16 + f(15)*1 => 240+15 = 255 -->
+
+<!--10의자리 1의자리 56 => 50 + 6 =>5*10 +6*1  -->
+<!--10의자리 1의자리 9*10 + 9*1  -->
+
+<!--f(15)*16 + f(15)*1  -->
+<!--R ff G 00 B 00 => #ff0000 (16진수표현) -->
+
+<!--RGB 색상표 10진수 표현 Red 0~255, Green 0~255, Blue 0~255	  		
+ 	=> color: rgb(0,0,0);	-->	
+<!-- 투명도 설정(alpha 불투명도) -->	
+<!-- color: rgba(255,0,0,50%);	  -->		
+							
+<style type="text/css">
+body {
+	font-size: 20px;
+}
+
+h1 {
+	font-family: "바탕";
+	font-size: 3em;
+}
+
+.accent {
+	font-size: 150%;
+	font-weight: 800;
+}
+
+.italic {
+	font-style: italic;
+}
+
+h1 {
+	color: #D4F4FA;
+}
+</style>
+</head>
+<body>
+<h1>레드향</h1>
+<p>껍질에 붉은 빛이 돌아 <span class="accent">레드향</span>이라 불린다.</p>
+<p>레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, <br>
+과육이 붉고 통통하다</p>
+<p class="italic">비타임 C와 비타민 P가 풍부해 혈액순환, <br>
+감기예방등에 좋은 것으로 알려져 있다</p>
+</body>
+</html>

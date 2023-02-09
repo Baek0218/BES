@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<!-- ** 행,열 합치기 할때 띄어쓰기 꼭 안해도 됨. 헷갈릴 경우만! -->
+<!-- 실습 : 4열 6행 표 만들기. -->
+<!-- 방이름	대상	크기	가격 -->
+<!-- 유채방	여성도미토리	4인실	1인 20,000원 -->
+<!-- 동백방	동성도미토리 -->
+<!-- 가족1팀 -->
+<!-- 천혜향방	-	2인실 -->
+<!-- 바깥채 전체를 렌트합니다 -->
+
+<body>
+	<table border="1">
+		<tr>
+			<th>방이름</th>
+			<th>대상</th>
+			<th>크기</th>
+			<th>가격</th>
+		</tr>
+		<tr>
+			<td>유채방</td>
+			<td>여성도미토리</td>
+			<td rowspan="3">4인실</td>
+			<td rowspan="4">1인 20,000원</td>
+		</tr>
+		<tr>
+			<td rowspan="2">동백방</td>
+			<td>동성도미토리</td>
+		</tr>
+		<tr>
+			<td>가족1팀</td>
+		</tr>
+		<tr>
+			<td>천혜향방</td>
+			<td>-</td>
+			<td>2인실</td>
+		</tr>
+		<tr>
+			<td colspan="4">바깥채 전체를 렌트합니다</td>
+		</tr>
+	</table>
+	<br>
+	<!-- 테이블 코딩시 각 영역을 구분지어서 사용하고 싶을때 적어준다.(디자인 할때 배경색 등 한번에 지정하여 하기 위함) -->
+	<!-- thead : 머리글(표 가장 윗부분), tbody : 본문글(표 몸통), tfoot : 바닥글(표 가장 아랫부분)  -->
+	<!-- <thead style="background-color: green;" 이런식으로 사용.> -->
+
+	<table border="1">
+		<thead style="background-color: green;">
+			<tr>
+				<th>방이름</th>
+				<th>대상</th>
+				<th>크기</th>
+				<th>가격</th>
+			</tr>
+		</thead>
+		<tbody style="background-color: yellow;">
+			<tr>
+				<td>유채방</td>
+				<td>여성도미토리</td>
+				<td rowspan="3">4인실</td>
+				<td rowspan="4">1인 20,000원</td>
+			</tr>
+			<tr>
+				<td rowspan="2">동백방</td>
+				<td>동성도미토리</td>
+			</tr>
+			<tr>
+				<td>가족1팀</td>
+			</tr>
+			<tr>
+				<td>천혜향방</td>
+				<td>-</td>
+				<td>2인실</td>
+			</tr>
+		</tbody>
+		<tfoot style="background-color: orange;">
+			<tr>
+				<td colspan="4">바깥채 전체를 렌트합니다</td>
+			</tr>
+		</tfoot>
+	</table>
+
+
+</body>
+</html>

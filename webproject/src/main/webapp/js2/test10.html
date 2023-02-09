@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js2/test10.html</title>
+<script type="text/javascript">
+/* P576 
+브라우저 내장객체 ⇒ 계층구조. 
+window - document - form  - select   */
+
+/*  
+1) window.document.폼이름.목록상자이름 내장객체 : 주제 목록상자이름 저장하는 내장객체
+2) document.폼이름.목록상자이름.멤버변수
+3) document.폼이름.목록상자이름.메서드() 호출해서 사용
+
+4) document.폼이름.목록상자이름.type => 목록상자이름 type 정보 저장
+5) document.폼이름.목록상자이름.value => 목록 중에 선택된 value 정보 저장
+
+6) document.폼이름.목록상자이름.selectedIndex
+	=> 목록상자이름 selectedIndex변수안에 선택된 목록의 순서정보 저장
+	
+7) document.폼이름.목록상자이름.focus() => 목록상자이름 포커스(활성화)기능
+*/
+
+	function fun1() {
+		alert(document.fr.se.type);
+		alert(document.fr.se.value);// 목록에서 선택된 value값
+		alert(document.fr.se.selectedIndex);// 목록에서 선택된 순서값
+	}
+	function fun2() {
+	//	document.fr.se.value = "2학년";// 목록에서 선택된 value값
+		document.fr.se.selectedIndex = 2;// 목록에서 선택된 순서값
+	}
+	function fun3() {
+		// 목록이 선택 안되어있으면(첫번재 목록이 선택되어 있으면)
+		// "목록 선택하세요"
+		// 목록활성화 document.fr.focus(); 
+		// 함수 호출한 곳으로 되돌아감 
+		/* if (document.fr.se.value == "") {
+			alert("목록 선택하세요");
+			document.fr.se.focus();
+			return;
+		} */
+		if (document.fr.se.selectedIndex == 0) {
+			alert("목록 선택하세요");
+			document.fr.se.focus();
+			return;
+		// 폼 데이터 전송
+		document.fr.submit();
+	}
+	}
+</script>
+</head>
+<body>
+	<form action="test1.html" method="get" name="fr" id="idfr">
+		목록상자 : <select name="se">
+		
+					<option value="">학년 선택하세요</option>
+					<option value="1">1학년</option>
+					<option value="2" selected>2학년</option>
+					<option value="3">3학년</option>
+				 </select><br> 
+		<input type="button" value="목록상자정보" onclick="fun1()">
+		<input type="button" value="목록선택변경" onclick="fun2()">
+		<input type="button" value="목록제어 후  전송" onclick="fun3()">
+<!-- multiple : 목록상자 여러개 펼쳐져있다.특수경우에만 사용  -->
+<!-- selected : 목록상자 펼쳐져 있는것 중 하나 선택되는 것. -->
+	</form>
+</body>
+</html>

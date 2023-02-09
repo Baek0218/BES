@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test4.html</title>
+<style type="text/css">
+/* 화면 레이아웃  */
+/* 	*{
+ 		border: 1px solid black; 
+	} */
+	ul{
+		list-style-type: none;
+	}
+	li{
+		/* 전체영역 block → 내용영역 inline */
+		border: 1px solid black;
+		/* padding: 20px; */
+		margin: 0px 20px;
+		display: inline-flex; 
+	}
+	a{
+		text-decoration: none;
+		color: black;
+		/* inline → block */
+		display: block;
+		padding: 20px;
+		/* background-color: yellow; */
+	}
+	a:hover{
+		text-decoration: underline;
+		background-color: pink;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<ul>
+		<li><a href="ex14.html">menu 1</a></li>
+		<li><a href="ex14.html">menu 2</a></li>
+		<li><a href="ex14.html">menu 3</a></li>
+		<li><a href="ex14.html">menu 4</a></li>
+		</ul>
+	</div>
+
+</body>
+</html>

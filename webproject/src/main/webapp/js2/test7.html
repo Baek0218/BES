@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js2/test7.html</title>
+<script type="text/javascript">
+	/* P576 
+	 브라우저 내장객체 ⇒ 계층구조. 
+	 window - document - form  - text, password,textrea
+	 - checkbox, radio
+	 - select   */
+
+	/*  1) window.document.폼이름.텍스트상자이름 내장객체 : 주제 텍스트상자정보 저장하는 내장객체
+	 2) document.폼이름.텍스트상자이름.멤버변수
+	 3) document.폼이름.메서드() 호출해서 사용
+	 4) document.폼이름.텍스트상자이름.type => 텍스트 상자 type 정보 저장
+	 5) document.폼이름.텍스트상자이름.value => 텍스트 상자 value 정보 저장
+	 6) document.폼이름.텍스트상자이름.focus() => 텍스트 상자 커서 깜빡 기능   
+	 7) document.폼이름.텍스트상자이름.blur() => 텍스트 상자 커서 깜빡 해제 기능   
+	 8) document.폼이름.텍스트상자이름.select() => 텍스트 상자 내용 선택하는(블럭) 기능  */
+
+	function fun1() {
+		alert(document.fr.tx.type);
+		alert(document.fr.tx.value);
+		document.fr.tx.focus();
+		document.fr.tx.blur();
+		document.fr.tx.select();
+	}
+	 
+	function fun2() {
+		document.fr.tx.value = "현아씨 천재";
+		// 텍스트 상자에 비어있는 값
+		document.fr.tx.value = "     ";
+	}
+	
+	function fun3() {
+		// alert(document.fr.tx.value);
+		// 텍스트 상자 비어있으면 "텍스트 상자 입력하세요" 포커스 깜빡
+		if (document.fr.tx.value == "") {
+			alert("텍스트 상자 입력하세요");
+			document.fr.tx.focus();
+			//비밀번호 상자 비어있으면 "비밀번호 상자 입력하세요" 포커스 깜빡
+		} else if (document.fr.pass.value == "") {
+			alert("비밀번호 상자 입력하세요");
+			document.fr.pass.focus();
+			//여러줄 텍스트 상자 비어있으면 "여러줄 텍스트 상자 입력하세요" 포커스 깜빡
+		} else if (document.fr.ta.value == "") {
+			alert("여러줄 텍스트 상자 입력하세요");
+			document.fr.ta.focus();
+		} else {
+			//데이터 전송,페이지연결 -- from action에 "test1.html"로 연결하게 설정.
+			document.fr.submit();
+		}// else가 있을경우 텍스트상자 동작하면 나머지 동작안하게끔 사용할 수 있다.
+	}
+	
+	function fun4() {
+		// 텍스트상자 제어2
+		if (document.fr.tx.value == "") {
+			alert("텍스트 상자 입력하세요");
+			document.fr.tx.focus();
+			// 메서드 동작 여기까지 하고 멈춤 = 함수를 호출한 곳으로 되돌아 감.
+			return;
+		}// 비밀번호 상자 비어있으면 "비밀번호 상자 입력하세요" 포커스 깜빡
+		if (document.fr.pass.value == "") {
+			alert("비밀번호 상자 입력하세요");
+			document.fr.pass.focus();
+			// 메서드 동작 여기까지 하고 멈춤 = 함수를 호출한 곳으로 되돌아 감.
+			return;
+		}// 여러줄 텍스트 상자 비어있으면 "여러줄 텍스트 상자 입력하세요" 포커스 깜빡
+		if (document.fr.ta.value == "") {
+			alert("여러줄 텍스트 상자 입력하세요");
+			document.fr.ta.focus();
+			// 메서드 동작 여기까지 하고 멈춤 = 함수를 호출한 곳으로 되돌아 감.
+			return;
+		}// 데이터 전송,페이지연결 -- from action에 "test1.html"로 연결하게 설정.
+		document.fr.submit();
+	}
+	
+</script>
+</head>
+<body>
+	<form action="test1.html" method="get" name="fr" id="idfr">
+		<b>텍스트 상자</b> : <input type="text" name="tx" value=""><br>
+		<b>비밀번호 상자</b> : <input type="password" name="pass" value=""><br>
+		<b>여러줄 텍스트 상자</b> : <textarea name="ta" rows="5" cols="10"></textarea><br> <!-- 텍스트라 사이에 공백X.글자입력X -->
+		<input type="button" value="텍스트상자정보" onclick="fun1()">
+		<input type="button" value="텍스트상자정보변경" onclick="fun2()">
+		<input type="button" value="텍스트상자제어" onclick="fun3()">
+		<input type="button" value="텍스트상자제어2" onclick="fun4()">
+	</form>
+</body>
+</html>

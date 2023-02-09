@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js2/login.html</title>
+
+<script type="text/javascript">
+	function fun1() {
+		// 아이디를 입력하세요.
+		if (document.fr.id.value == "") {
+			//alert("아이디를 입력하세요");
+			// DOM에 사용
+			// 1)대상.innerHTML 변수 html내용저장
+			// 2)대상.innerTEXT 변수 text내용저장
+			document.getElementById("divmsg").innerHTML = "<h6 style='color:red'>아이디를 입력하세요</h6>";
+			document.fr.ta.focus();
+			return;
+		}
+		// 비밀번호를 입력하세요.
+		if (document.fr.pass.value == "") {
+			//alert("비밀번호를 입력하세요.");
+			document.getElementById("divmsg").innerHTML = "<h6 style='color:red'>비밀번호를 입력하세요</h6>";
+			document.fr.pass.focus();
+			return;
+		}
+		document.fr.submit();
+	}
+</script>
+</head>
+<body>
+<h1>로그인(login.html)</h1>
+	<form action="loginPro.html" method="get" name="fr">
+		아이디 : <input type="text" name="id"><br> 
+		비밀번호 : <input type="password" name="pass"><br>
+	<div id="divmsg"></div><br>  <!-- div사이에는 메시지 안쓰고 DOM함수를 사용함. -->	
+	<input type="submit" value="로그인">
+	<input type="button" value="로그인버튼" onclick="fun1()">
+	</form>
+
+</body>
+</html>

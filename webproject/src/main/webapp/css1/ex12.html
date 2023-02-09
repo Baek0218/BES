@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/ex12.html</title>
+<!--p235 => 표 th 배경색, 선합치기, 표caption 아래표시  -->
+<style type="text/css">
+	table{
+		border: 1px solid black;
+		border-collapse: collapse;	
+		caption-side: bottom;
+		padding: 10px;	
+		text-align: center;
+	}	
+	.heading{
+		background-color: #eee;
+	}
+	th,td{
+		border: 1px solid black;
+		border-collapse: collapse;
+		padding: 10px;	
+	}
+	th{
+	background-color: silver;}
+</style>
+</head>
+<body>
+
+<table>
+<caption>2019 국민 독서실태</caption>
+	<tr>
+		<th class= heading>구분</th>
+		<th class= heading>성인</th>
+		<th class= heading>독서자</th>
+	</tr>
+	<tr>	
+		<th class= heading>종이책</th>
+		<td>6.1권</td>
+		<td>11.8권</td>
+	</tr>
+	<tr>	
+		<th class= heading>전자책</th>
+		<td>1.2권</td>
+		<td>7.1권</td>
+	</tr>
+	<tr>
+		<th class= heading>오디오북</th>
+		<td>0.2권</td>
+		<td>5.5권</td>	
+	</tr>
+</table>
+
+
+</body>
+</html>

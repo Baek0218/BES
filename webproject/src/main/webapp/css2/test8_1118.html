@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test8.html</title>
+<style type="text/css">
+p{
+    width: 300px; height: 200px; border: 3px solid black;
+}
+#pos1{
+/* 	static : 문서의 흐름에 맞춰 배치(기본값)	 */
+	position: static;
+}
+#pos2{
+/* 	relative : 위치값을 지정(지정 하지 않으면 static 같음)	 */
+	position: relative;
+}
+#pos3{
+	position: relative;
+	left: 100px;
+/*  현위치에서	-50px 위로 올라감 */
+	top: -50px;
+}
+#pos4{
+/* 브라우저 창을 기준으로 위치를 지정 */
+	position: fixed;
+	right: 30px;
+	top: 30px;
+}
+</style>
+</head>
+<body>
+<p id="pos1">1.가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사
+가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사</p>
+<p id="pos2">2.가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사
+가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사</p>
+<p id="pos3">3.가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사
+가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사</p>
+<p id="pos4">4.가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사
+가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사</p>
+</body>
+</html>

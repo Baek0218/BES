@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test5.html</title>
+<script type="text/javascript">
+	function fun1() {
+		alert("안녕하세요");
+		alert("반갑습니다");
+	}
+	
+	function fun2(a,b){
+		alert(a+b);
+		alert(a-b);
+		alert(a*b);
+		alert(a/b);
+	}
+	/* 두 수 비교 -> 최대값 리턴  */
+	function fun3(a,b){
+	var max=0; // 최대값 저장
+	if(a>b){
+		max = a;
+	}else{
+		max = b; 	
+	}
+	max = a > b? a : b;
+	return max;
+	} 
+</script>
+</head>
+<body>
+<!-- fun1() 함수 출력  -->	
+	<input type="button" value="함수호출버튼" onclick="fun1()">
+	
+<!-- fun2() 함수 출력  -->	
+	<input type="button" value="사칙연산함수호출" onclick="fun2(10,20)">
+	
+<!-- fun3() 함수 출력  -->	
+	<input type="button" value="최대값함수호출" onclick="alert(fun3(10,20))">
+</body>
+</html>

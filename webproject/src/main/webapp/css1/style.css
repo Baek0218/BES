@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/* css1/style.css  */
+
+/* 태그 {
+	속성:값;
+	background-color : pink;
+	안여백
+	padding: 10px
+		} 
+*/
+
+h1 {
+	background-color : pink;
+	padding: 10px
+	}

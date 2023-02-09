@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html1/ex8.html</title>
+</head>
+<body>
+<form action="ex7.html" method="get"></form>
+<h1>p155 배송정보</h1>
+<!-- autofocus : 자동 입력 커서 
+ 	 placeholder : 설명글
+ 	 readonly : 읽기만 가능
+ 	 required : 필수조건 제어 -->
+ 	 
+<fieldset>
+<legend>배송 정보</legend>
+<label>이름</label>
+<input type="text" name="name" autofocus><br> <!--p148-->
+<label>배송주소</label>
+<input type="text" name="address" value="부산" readonly required><br> <!-- p149 -->
+<label>이메일</label>
+<input type="email" name="email" placeholder="이메일 형식(설명)"><br> <!-- p149 -->
+<label>연락처</label>
+<input type="tel" name="tel"><br>
+<label>배송 지정</label>
+<input type="date" name="date">
+(주문일로부터 최소 3일 이후)<br>
+<label>메모</label>
+<textarea rows="5" cols="30" name="memo"></textarea>
+
+
+	
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

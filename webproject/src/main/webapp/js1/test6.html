@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test6.html</title>
+<script type="text/javascript">
+/* 내장함수 : 자바스크립트 언어를 만들때 미리 만들어놓은 함수  */
+/* 알림창 출력  */
+/* alert("함수호출"); */
+
+
+/* 확인창 출력 - 확인을 클릭 true로 리턴 - 취소를 클릭 false로 리턴 */
+// confirm("확인해주세요");
+// alert(confirm("확인해주세요"));
+
+// 변수값 true,false 담아서 확인창 출력.
+/* 	var a = confirm("확인해주세요")
+	alert(a)
+	if(a == true){
+		alert("확인버튼을 클릭");
+	}else{
+		alert("취소버튼을 클릭");
+	} */
+	
+// 프롬프트 창에서 입력 받기 (문자열로 입력을 받음)
+var b = prompt("입력하세요");
+alert(b);		// 5
+alert(b+100);	// 5100 연결 --> 문자+숫자   
+// b문자를 숫자(정수)로 변경 parseInt()
+alert(parseInt(b)+100); // 105 숫자더하기  
+// b문자를 숫자(실수)로 변경 parseFloat()
+alert(parseFloat(b)+100); // 105.5 숫자더하기
+
+alert(b*100);	// 500 "*"=곱셈
+alert(b > 100);	// false 
+
+// html 웹 페이지 출력
+document.write("b="+b);
+
+// 콘솔창 출력 --> 웹브라우저에서 F12 --> console
+console.log("b="+b);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

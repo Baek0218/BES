@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test3.html</title>
+<script type="text/javascript">
+/*   (3-1)   산술연산자  +     -     *      /      %      1증가 ++      1감소 –- 
+	 (3-2)  연결연산자   +
+	 (3-3)  대입연산자(할당연산자 )   =   +=  -=   *=  /=  %=
+	 (3-4)  비교연산자 == != >= > <= <      → 잘 안쓴다.  [===(자료형 일치여부)   !==(자료형 일치하지않는지)]
+	 */
+	 
+	alert("javascript" > "Jabascript"); // true
+/* 	 (3-5) 논리연산자 &&(and) ||(or) !(not) */
+/*   (3-6) 조건연산자 조건? 참인경우 명령:거짓인 경우 명령; */
+	var a = 10;
+	a % 3 == 0 ? alert("3의배수") : alert("3의 배수 아님"); // 3의 배수아님
+	
+/* 조건문 - if  */	
+	if(a % 2 == 0) {
+		alert("2의 배수, 짝수");
+	} else { 
+		alert("홀수");
+		  }
+/* 조건문 - while */	
+	 a=1;
+	 switch (a) {
+		case 1 : alert("일"); break;
+		case 2 : alert("이"); break;
+		case 3 : alert("삼"); break;
+		default: alert("잘 못 입력"); break;
+	   }
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

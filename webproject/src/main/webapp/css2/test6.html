@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test6.html</title>
+</head>
+<style type="text/css">
+/* id="container" 너비 1200px,가운데정렬 밖여백 위아래 20px auto  */
+
+#container{
+	width: 1200px; 
+	margin: 20px auto;
+	}
+
+/* id="header" 너비 100% , 높이 120px, 배경색 */
+#header{
+	width: 100%; height: 120px;
+	background-color: #E8D9FF;
+}
+
+/* id="sidebar" 너비 300px, 높이 600px,배경색, 왼쪽으로 어울림*/
+#sidebar{
+	width: 300px;  
+	height: 600px;
+	background-color: #FFD9FA;
+	float: left;
+}
+/* id="contents" 너비 900px 높이 600px 배경색,왼쪽으로 어울림 */
+#contents{
+	width: 900px; 
+	height: 600px;
+	background-color: #FFD8D8;
+	float: left;
+}
+/* id="footer" 너비 100% 높이 100px 배경색 어울림 해제 */
+#footer{
+	width: 100%; 
+	height: 100px;
+	background-color: #D4F4FA;
+	clear: left;
+}
+</style>
+<body>
+<div id="container">
+<div id="header">헤더</div>
+<div id="sidebar">사이드바</div>
+<div id="contents">본문</div>
+<div id="footer">푸터</div>
+</div>
+</body>
+</html>

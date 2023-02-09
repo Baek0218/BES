@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js2_test/test1.html</title>
+<style type="text/css">
+#idfr input:not([type=button]) {
+	margin : 2px;
+}
+h3 {
+	color:gray;
+	text-align:center;
+}
+h5 {
+	color : green;
+	text-align : right;
+}
+h6{
+	color : gray;
+}
+label{
+	text-align: right;
+	padding-right: 5px;
+	width : 130px;
+	float : left;
+}
+#a4 , #a5{
+	width : 363px;
+}
+span{
+	margin-left: 300px;
+}
+</style>
+<script type="text/javascript">
+function fun1(){
+	if(document.fr.tx.value == ""){
+		alert("이름을 입력하세요");
+		document.fr.tx.focus();
+		return false;
+	}if(document.fr.tx2.value.length != 6){
+		alert("주민등록번호 앞자리를 입력하세요")
+		document.fr.tx2.focus();
+		return false;
+	}if(document.fr.tx3.value.length != 7){
+		alert("주민등록번호 뒷자리를 입력하세요")
+		document.fr.tx3.focus();
+		return false;
+	}if(document.fr.tid.value.length < 4 || document.fr.tid.value.length >10 ){
+    	alert("회원ID를 입력하세요");
+    	document.fr.tid.focus();
+    	return false;
+	}
+	if(document.fr.pw.value.length <4 || document.fr.tid.value.length >10 ){
+		alert("비밀번호를 입력하세요");
+		document.fr.pw.focus();
+		return false;
+	}if(document.fr.pw2.value != document.fr.pw.value ){
+		alert("비밀번호 일치하지않습니다");
+		document.fr.pw2.focus();
+		return false;
+	}if(document.fr.tl.value == ""){
+		alert("전화번호를 입력하세요");
+		document.fr.tl.focus();
+		return false;
+	}if(document.fr.se.value == 0){
+		alert("회원분류를 선택하세요");
+		document.fr.tl.focus();
+		return false;
+	}else document.fr.submit();
+	
+}
+
+</script>
+</head>
+<body>
+<h3>Registration</h3>
+<h5>회원가입양식</h5>
+<h6>＊ 표시는 반드시 입력하셔야 합니다.</h6>
+<form action="a.jsp" method="get" name="fr" id="idfr">
+ <label>* 이름</label> <input type="text" name="tx"><br>
+ <label>* 주민등록번호</label> <input type ="text" name="tx2"> 
+			- <input type ="text" name="tx3"><br>
+ <label>* 회원 ID</label> <input type="text" name="tid">
+ <input type="button" name="tid2" value="중복확인" onclick="alert('중복확인완료')"><br>
+ <label>* 비밀번호</label><input type="password" name="pw"><br>
+ <label>* 비밀번호 확인</label> <input type="password" name="pw2"><br>
+ <label>  E-mail</label>  <input type="email" name="em"><br>
+ <label>* 전화번호</label>  <input type="tel" name="tl"><br>
+ <label>  핸드폰번호</label>  <input type="tel" name="hp"><br>
+ <label>우편번호</label><input type="text" name="addr">
+		-<input type="text" name="addr2"> 
+		 <input type="button" name=sh value="검색" onclick="location.href='test2.html'" >
+		 <br><label>　</label><input type="text" name="addr3" id="a4" readonly>
+		 <br>
+<label>상세 주소</label>  <input type="text" name="addr4" id="a5" value=""><br>
+<label>* 회원분류</label>  <select name = "se">
+			 <option value="" selected>선택해주십시오</option>
+			 <option value="1">준회원</option>
+			 <option value="2">정회원</option>
+			 <option value="3">우수회원</option>
+		  </select> <br>
+<span>		  
+<input type="button" value="가입" id = "bu" onclick="fun1()">		
+<input type="reset" value="취소" id = "re">	
+</span>	
+</form>
+</body>
+</html>

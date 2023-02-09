@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js2/test9.html</title>
+<script type="text/javascript">
+/* P576 
+브라우저 내장객체 ⇒ 계층구조. 
+window - document - form  - checkbox, radio, select   */
+
+/*  
+1) window.document.폼이름.라디오이름[순서] 내장객체 : 주제 라디오상자정보 저장하는 내장객체
+2) document.폼이름.라디오상자이름[순서].멤버변수
+3) document.폼이름.라디오상자이름[순서].메서드() 호출해서 사용
+
+4) document.폼이름.라디오상자이름[순서].type => 라디오상자 type 정보 저장
+5) document.폼이름.라디오상자이름[순서].value => 라디오상자 value 정보 저장
+
+6) document.폼이름.라디오상자이름[순서].checked
+	=> 라디오상자 체크되어있으면 checked변수안에 true 정보 저장
+	=> 라디오상자 체크안되어있으면 checked변수안에 false 정보 저장
+	
+7) document.폼이름.라디오상자이름[순서].click() => 라디오상자 클릭(선택) 기능
+*/
+
+function fun1(){
+	// 첫번째 라디오상자의 정보 확인
+	alert(document.fr.ra[0].type);
+	alert(document.fr.ra[0].value);
+	alert(document.fr.ra[0].checked);
+}
+function fun2(){
+	// 첫번째 라디오상자의  checked 변수에 값을 true 저장
+	alert(document.fr.ra[0].checked = true);
+}
+function fun3(){
+	// 두번째 라디오상자의 클릭(선택)
+	document.fr.ra[1].click();
+}
+function fun4(){
+	// 라디오 상자 선택안되어 있으면 "라디오 상자 선택하세요" 함수호출 한 곳으로 되돌아감. 제어 후 전송
+	if(document.fr.ra[0].checked == false && document.fr.ra[1].checked == false ){
+		alert("라디오 상자 선택하세요");
+		return;}
+	// 체크박스 상자 선택안되어 있으면 "체크박스 상자 선택하세요" 함수호출 한 곳으로 되돌아감. 제어 후 전송
+	if(document.fr.ch[0].checked == false && document.fr.ch[1].checked == false){
+		alert("체크박스 상자 선택하세요");
+		return;
+	}
+	// 모두 선택되어있으면 폼 데이터 전송 
+	document.fr.submit();
+	}
+
+
+
+
+</script>
+</head>
+<body>
+<form action="test1.html" method="get" name="fr" id="idfr">
+라디오상자 :<input type = "radio" name = "ra" value = "남">남
+		 <input type = "radio" name = "ra" value = "여">여<br>
+			    
+체크박스 상자 :<input type = "checkbox" name = "ch" value = "여행">여행
+			<input type = "checkbox" name = "ch" value = "게임">게임<br>
+				
+<input type = "button" value = "라디오상자정보" onclick="fun1()">
+<input type = "button" value = "첫번째라디오상자선택" onclick="fun2()">
+<input type = "button" value = "두번째라디오상자선택" onclick="fun3()">
+<input type = "button" value = "제어 후 전송" onclick="fun4()">
+
+</form>
+</body>
+</html>

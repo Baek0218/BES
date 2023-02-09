@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html2/test2.html</title>
+</head>
+<body>
+<form action="test1.html" method="get">
+<!-- 데이터 넘어가는지 눈으로 확인하기 위해 get방식사용.post사용X. -->
+<fieldset>
+<legend>필수</legend>
+
+<label>아이디 : </label> 
+<input type="text" name="tx" value="kim" size="30" maxlength="10"><br>
+<label>비밀번호 : </label> 
+<input type="password" name="pass" value="123"><br>
+
+<label>검색어 삭제 x : </label> 
+<input type="search" name="se"><br>
+
+<label>url 주소제어: </label> 
+<input type="url" name="url"><br>
+
+<label>email 주소제어: </label> 
+<input type="email" name="tel"><br>
+
+<label>tel 모바일 숫자키보드: </label> 
+<input type="tel" name="email"><br>
+</fieldset>
+<fieldset>
+<legend>선택</legend>
+
+<label>라디오 버튼(여러개 중에 하나 선택)</label>
+<input type="radio" name="ra" value="1" checked>남
+<!-- checked = 남을 체크하면 여 체크 못하게 하는 태그값? -->
+<input type="radio" name="ra" value="2">여<br>
+
+<label>체크박스(여러개 선택)</label>
+<input type="checkbox" name="ch" value="1" checked>남
+<input type="checkbox" name="ra" value="2">여<br>
+</fieldset>
+
+<fieldset>
+<legend>숫자</legend>
+<label>number</label>
+<input type="number" name="num1" min="1" max="10" step="2" value="1"><br>
+<label>range</label>
+<input type="range" name="num2" min="1" max="3" value="1"><br>
+</fieldset>
+
+<fieldset>
+<legend>날짜</legend>
+<label>month </label>
+<input type="date" name="date" min="2022-11-01" max="2022-11-15" 
+value="2022-11-01"><br>
+<label>week </label>
+<input type="week" name="week"><br>
+<label>time </label>
+<input type="time" name="time"><br>
+<label>datetime-local </label>
+<input type="datetime-local" name="datetime"><br>
+</fieldset>
+
+<fieldset>
+<legend>기타</legend>
+<label>file</label>
+<input type="file" name="file"><br> 
+<!-- 파일선택 타입 -->
+<label>hidden</label>
+<input type="hidden" name="hi" value=""><br>
+<!-- hidden : 눈에 안보이는데 데이터 값을 넘길때 쓰는 것.name,value 값 꼭 넣어야한다. -->
+<label>여러줄 입력</label>
+<textarea rows="5" cols="10" name="ta">입력값</textarea><br>
+<!-- value값 없음. -->
+<label>목록상자</label>
+<select name="se" size="3" multiple>
+	<option value="1">목록1</option>
+	<option value="2" selected>목록2</option> 
+	<!-- selected : 처음 시작을 목록2로 시작하겠다. -->
+	<option value="3">목록3</option>
+</select><br>
+<label>데이터 목록</label>
+<input type="text" list="d">
+<datalist id="d">
+	<option value="1">옵션1</option>
+	<option value="2">옵션2</option>
+	<option value="3">옵션3</option>
+</datalist><br>
+</fieldset>
+
+<input type="submit" value="전송">
+<!-- 이미지에 submit 기능이 포함된 버튼 -->
+<input type="image" src="3.jpg">
+<input type="reset" value="취소(초기화)">
+<input type="button" value="버튼">
+<!-- 버튼 : 자바스크립트랑 같이 할 예정. 모양만 버튼. -->
+</form>
+</body>
+</html>
+<!-- input 태그의 타입속성 p130 
+ 'size = 텍스트,비번 필드의 길이 지정.'
+ 'maxlength'
+ 'value'
+ 'url' 
+	날짜-date 목록상자-select
+ 텍스트상자,패스워드,이메일은 꼭 알아두고 나머지는 적당히 알아두기.-->
+ 

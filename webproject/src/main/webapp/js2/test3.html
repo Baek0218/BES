@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js2/test3.html</title>
+<script type="text/javascript">
+// p589
+/* 2) window.history 내장객체 
+	  : 주제 웹브라우저 방문기록 정보를 저장하는 내장객체. window 생략가능
+ 	a. history.멤버변수, history.메서드() 호출해서사용
+ 	b. history.length 방문기록 개수
+ 	c. history.back() history.forward() history.go() 호출해서 사용  */
+	function fun1(){
+		alert(history.length);
+	  }
+	function fun2() {
+		alert("한칸 뒤로이동");
+		history.back();
+//		history.go(-1);
+	}
+	function fun3() {
+		alert("한칸 앞으로이동");
+		history.forward();
+//		history.go(1);		
+	}
+</script>
+</head>
+<body>
+<input type="button" value="방문기록개수" onclick = "fun1()">
+<input type="button" value="뒤로한칸이동" onclick = "fun2()">
+<input type="button" value="앞으로한칸이동" onclick = "fun3()">
+</body>
+</html>

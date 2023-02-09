@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js2/test5.html</title>
+<script type="text/javascript">
+/* 
+방법1)
+P576 
+브라우저 내장객체 ⇒ 계층구조. 
+		window - document - image,.. 
+		       			  - form  - text, password,textrea
+			        	  -  checkbox, radio
+ 			        	  -  select  
+방법2)
+P602 
+[DOM : Document Object Model]
+    * 문서객체모델 	→ 자바스크립트를 이용하여 웹문서에 접근. 
+	              제어할 수 있는 객체를 사용해 웹 문서를 체계적으로 정리하는 방법 
+	            → HTML DOM 구조 => document 객체 image,form 객체 인식
+1) window.document.이미지이름 내장객체 : 주제 이미지정보 저장하는 내장객체
+2) document.이미지이름.멤버변수, document.이미지이름.메서드() 호출해서 사용
+3) document.이미지이름.src => 이미지 소스파일정보 저장
+4) document.이미지이름.width => 이미지 너비 저장
+5) document.이미지이름.height => 이미지 높이 저장	         
+6) document.이미지이름.border => 이미지 테두리선 저장         
+	            */
+function fun1(){
+	alert(document.img1.src);
+/* 	alert(document.img1.width);
+	alert(document.img1.height);
+	alert(document.img1.border); */
+//	DOM으로 접근 => ID선택자로 접근하는 getElementById()메서드
+//	태그(요소명).getElementById(표시이름)
+//	alert(document.getElementById("idimg1").src);
+	alert(document.querySelector("#idimg1").src); // 거의 안쓰인다.
+	
+}
+function fun2(){
+	document.img1.src="../html1/2.jpg";
+	document.img1.width="300";
+	document.img1.height="400";
+	document.img1.border="10";
+}
+function fun3(){
+	// alert("이미지 클릭");
+	// img2 이미지를 src값 ../html1/3.jpg 변경, 테두리선 5 변경
+//	document.img2.src="../html1/3.jpg";
+	document.img2.border="5";
+	alert(document.getElementById("idimg2").src="../html1/3.jpg");
+}
+function fun4(){
+	// img3 이미지를 src값 ../html1/4.jpg 변경, 이벤트:마우스오버
+//	document.img3.src="../html1/4.jpg";
+	alert(document.getElementById("idimg3").src="../html1/4.jpg");
+}
+function fun5(){
+	// img3 이미지를 src값 ../html1/3.jpg 변경, 이벤트:마우스아웃
+	document.img3.src="../html1/3.jpg";
+}
+</script>
+</head>
+<body>
+<img src="../html1/1.jpg" name="img1" id="idimg1" width="100" height="200" border="1" >
+<input type="button" value="이미지정보확인" onclick="fun1()" >
+<input type="button" value="이미지변경" onclick="fun2()"><br>
+<img src="../html1/2.jpg" name="img2" id="idimg2" onclick="fun3()">이미지클릭<br>
+<img src="../html1/3.jpg" name="img3" id="idimg3" onmouseover="fun4()"  onmouseout="fun5()">마우스오버,아웃<br>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test13.html</title>
+<style type="text/css">
+/*  3. 가상클래스와 가상요소 */
+/* 가상클래스(사용자 동작) :link, :visited, :hover, :active 
+           :target , :enabled, :disabled, :checked , :not*/
+a:link, a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: white;
+	background-color: silver;
+}
+
+a:active {
+	text-decoration: underline;
+	color: white;
+	background-color: red;
+}
+
+#intro:target {
+	background-color: green;
+}
+
+#tx:enabled {
+	color: blue;
+}
+
+#tx:disabled {
+	color: red;
+}
+/* 인접 형제 */
+input:checked+label {
+	color: red;
+}
+/* 제외하고 */
+a:not([href^=m]) {
+	color: blue;
+}
+</style>
+</head>
+<body>
+	<ul>
+		<li><a>메인 메뉴 : </a></li>
+		<li><a href="#intro">메뉴 1</a></li>
+		<li><a href="ex14.html">메뉴 2</a></li>
+		<li><a href="mic.png">메뉴 3</a></li>
+		<li><a href="test1.html">메뉴 4</a></li>
+		<li><a href="ex14.html">메뉴 5</a></li>
+		<li><a href="ex14.html">메뉴 6</a></li>
+	</ul>
+	<div id="intro">
+		<h2>이용안내</h2>
+		내용
+	</div>
+	<input type="text" name="tx1" id="tx" value="입력값">
+	<input type="text" name="tx2" id="tx" disabled value="입력값2">
+
+	<ul>
+		<li><input type="radio" name="room" id="basic"> <label>기본형</label>
+		</li>
+		<li><input type="radio" name="room" id="family"> <label>가족형</label>
+		</li>
+	</ul>
+
+</body>
+</html>
+
+
+

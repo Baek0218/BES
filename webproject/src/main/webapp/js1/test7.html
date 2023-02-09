@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js1/test7</title>
+<script type="text/javascript">
+/* 이벤트 : 웹브라우저, 사용자가 행하는 어떤 동작*/
+/* 예) 키보드에 키를 누르는 것, 웹브라우저에 새로운 페이지가 불러오는 것 */
+/*		⇒ 이벤트 발생하면 자바스크립트 명령실행 동작  */
+/*  2. 마우스 이벤트 : click, dbclick, mousedown, [mouseover ↔ mouseout] mouseup*/
+/*  3. 키보드 이벤트 : keydown, keypress, keyup
+	4. 문서로딩 이벤트 : load, unload, scroll, resize 
+	5. 폼 이벤트 : focus, blur, change, reset, submit
+ */
+
+</script>
+</head>
+<body onload = "alert('문서불러옴')">
+<input type="button" value="마우스클릭" onclick="alert('마우스클릭')"><br>
+
+키를 눌렀다가 손을 뗄 때 : <input type="text" name="tx" onkeyup="alert('keyup')"><br>
+키보드에 키를 눌렀을 때 : <input type="text" name="tx2" onfocus="alert('focus')"><br>
+포커스가 해제 될 때 : <input type="text" name="tx2" onblur="alert('blur')"><br>
+내용 변경 될 때 : 
+	<select name = "se" onchange = "alert('내용변경')">
+		<option value="1">목록1</option>
+		<option value="2">목록2</option>
+		<option value="3">목록3</option>
+	</select><br>
+	
+폼이벤트 reset, submit :  <br>
+<form action = "test1.html" method = "get" onreset = "alert('리셋')"
+ 										   onsubmit = "alert('전송')">
+ 										    										   										  
+아이디 : <input type = "text" name="id"><br>
+<input type ="reset" value = "리셋">
+<input type ="submit" value = "전송">
+</form>	
+</body>
+</html>

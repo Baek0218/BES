@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test14.html</title>
+<style type="text/css">
+/* p343 가상클래스(위치) :only-child, :only-of-type
+:first-child, :first-of-type , 
+:last-child, :last-of-type
+:nth-child(), :nth-of-type(), 
+ :nth-last-child(), :nth-last-of-type()*/
+div :nth-child(3) {
+	background-color: yellow;
+}
+/* div안에 p태그 중 3번째  */
+div p:nth-of-type(3) {
+	background-color: green;
+}
+/* odd홀수 2n+1, even 짝수 2n */
+div :nth-child(even) {
+	background-color: skyblue;
+}
+</style>
+</head>
+<body>
+<div>
+	<h2>제목1</h2>
+	<p>본문 내용1</p>
+	
+	<p>본문 내용2</p>
+	
+	<h2>제목2</h2>
+	<p>본문 내용2_1</p>
+	
+	<h2>제목3</h2>
+	<p>본문 내용3_1</p>
+</div>
+</body>
+</html>

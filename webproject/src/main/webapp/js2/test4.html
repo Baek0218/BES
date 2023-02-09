@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js2/test4.html</title>
+<script type="text/javascript">
+/* 1) window.document 내장객체 : 주체 웹브라우저 html문서 기본틀 정보를 저장하는 내장객체
+		: window 생략가능
+   2) document.멤버변수, document.메서드() 호출해서 사용
+   3) document.title => 문서 제목정보 저장
+   4) document.bgColor => 문서 배경색을 저장
+   5) document.writeln() => html문에 내용 출력 (메서드)
+*/
+function fun1(){
+	   alert(document.title);
+   }
+function fun2(){
+	   // 문서 제목변경 document.title변수에 값을 변경 => "문서제목"
+	   document.title="문서제목";
+   }
+function fun3(){ 
+	   document.bgColor="#E8D9FF";
+   }
+function fun4(color){ 
+	    if(color == "green"){
+		   document.bgColor="green";
+	   }else if(color == "skyblue"){
+		   document.bgColor="skyblue";
+	   }else if(color == "pink"){
+		   document.bgColor="pink";
+	   }
+   }
+function fun5(color){
+	switch(color){
+		case "black" : document.bgColor="black";  break;
+		case "gray" : document.bgColor="gray"; break;
+		case "yellow" : document.bgColor="yellow" ;break;
+	}
+}  	
+function fun6(a){
+	document.bgColor = a;
+	}// --> a는 변수를 담는 기억장소.
+document.writeln("문서 내 출력");
+function fun7(){
+	// p594 window.screen 내장객체 : 화면 정보를 저장하는 내장객체
+	// screen.변수 screen.메서드() 
+	alert(screen.availWidth);//1920
+	alert(screen.availHeight);//1040
+//	alert(screen.orientation);//방향
+	alert(screen.width);//1920
+	alert(screen.height);//1080
+}
+
+</script>
+</head>
+<body>
+<br>
+<input type="button" value="문서제목출력" onclick = "fun1()">
+<input type="button" value="문서제목변경" onclick = "fun2()">
+<input type="button" value="배경색변경" onclick = "fun3()"><br>
+<input type="radio" name="ra" value="green" onclick = "fun4('green')">green색
+<input type="radio" name="ra" value="skyblue" onclick = "fun4('skyblue')">skyblue색
+<input type="radio" name="ra" value="pink" onclick = "fun4('pink')">pink색<br>
+<input type="radio" name="ra" value="green" onclick = "fun5('black')">black색
+<input type="radio" name="ra" value="skyblue" onclick = "fun5('gray')">gray색
+<input type="radio" name="ra" value="pink" onclick = "fun5('yellow')">yellow색<br>
+<input type="radio" name="ra" value="green" onclick = "fun6('red')">red색
+<input type="radio" name="ra" value="skyblue" onclick = "fun6('purple')">purple색
+<input type="radio" name="ra" value="pink" onclick = "fun6('white')">white색<br>
+<input type="button" value="화면정보출력" onclick="fun7()">
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html1/test5.html</title>
+</head>
+
+<!-- 해상도(선명도) : 화면을 이루는 빛의 개수  -->
+<!-- 픽셀 : 화면을 이루는 하나의 빛의 단위, 고정 크기. -->
+<!-- <!-- % : 브라우저를 기준으로 몇퍼센트 적용하는 단위, 상대적 크기. --> 
+<!-- [./] : 현재위치.생략가능.[, : 현재위치] -->
+<body> 
+<img src="1.jpg" width="200px" height="300" border="10" ><br>
+<img src="2.jpg" alt="이미지 설명" width="50%" height="50%"><br>
+<img src="3.jpeg" alt="이미지 없음"><br>
+<img src="4.jpg" alt="이미지 없음"><br>
+<img src="images/5.jpg"><br>
+<img src="images/6.jpg"><br>
+
+<!-- 같은폴더에 있을경우 img src="이미지이름" -->
+<!-- 같은폴더에 없을경우 ing src="images/이미지.jpg" -->
+<!-- 상대참조 : 열려있는 파일을 기준으로 참조 -->
+<!--. : 현재 위치(폴더), .. : 상위폴더   -->
+
+<h1>html2폴더에 있는 3.jpg</h1>
+<img src="../html2/3.jpeg"><br>
+<h1>html2폴더에 있는 images폴더에 4.jpg</h1>
+<img src="../html2/images/4.jpg">
+
+<!-- 절대참조 : /를 기준으로 참조. "/=루트"
+			 웹 서버에서 절대 주소를 기준으로 참조. -->
+<h1>웹 서버에서 절대 주소를 기준으로 참조.</h1>
+<!-- http://localhost:8080/webproject/html1/test5.html -->
+<h1>서버주소 /루트 webproject폴더 안에 html2폴더 images폴더 4.jpg</h1>
+<img src="/webproject/html2/images/4.jpg"><br>
+<h1>루트 webproject폴더 안에 html1폴더 1.jpg</h1>
+<img src="/webproject/html1/1.jpg">
+
+<!-- 221101 추가작성 
+이미지 삽입하는 img 태그 : 기본형 <img src="이미지파일경로" alt="대체용 텍스트"
+ -->
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html1/ex7.html</title>
+</head>
+<form action="test1.html" method="get">
+<body>
+<h1>p138 회원 가입을 환영합니다.</h1>
+<!--  아이디 : 설명글 4글자~10글자 사이, 공백없이 입력",자동커서입력
+	  비밀번호 : 설명글 "문자와 숫자,특수 기호 포함 입력"
+	  메모 : "설명글 남길 말씀이 있다면 여기에"
+	  아이디,이메일,비밀번호,비밀번호 확인 필수조건제어 -->
+<fieldset>
+<legend>사용자정보</legend>
+<ul type="disc">
+<li><label>아이디 : </label>
+<input type="text" name="te" value="" autofocus placeholder="아이디를입력하세요" required></li>
+<li><label>이메일 : </label>
+<input type="email" name=em value="" required></li>
+<li><label>비밀번호 : </label>
+<input type="password" name=pw value="" placeholder="문자,숫자,특수기호 포함입력" required></li>
+<li><label>비밀번호 확인 : </label>
+<input type="password" name="pc" value="" required></li>
+<!--  p160 가입경로,메모 추가-->
+
+<li><label>가입 경로</label>
+<select name="se" size=1>
+	<option value="블로그" selected>블로그
+	<option value="카카오">카카오
+	<option value="네이버">네이버
+	</option></select></li>
+	
+<li><label>메모</label>
+<textarea rows="5"  cols="20" name="ta" placeholder="남길 말씀이 있다면 여기에"></textarea></li>
+</ul><!--  rows : 세로 cols : 가로  -->
+</fieldset>
+
+<fieldset>
+<legend>이벤트와 새로운소식</legend>
+<input type="radio" name="ra" value="y">메일수신
+<input type="radio" name="ra" value="n" checked>메일 수신 안 함
+</fieldset>
+
+<input type="submit" value="가입하기">
+<input type="reset" value="취소">
+</form>
+</body>
+</html>

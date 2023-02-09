@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style type="text/css">
+/* 전체대상 밖여백 0px, 안여백 0px  */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+/* body태그 대상 배경색 #ccc, 안여백 20px */
+body {
+	background-color: #ccc;
+	padding: 20px;
+}
+
+/* id="signup" 배경색 흰색, 테두리선 1px 실선 #222, 테두리선 둥글게 5px 
+	   안여백 20px, 너비 400px,*/
+#signup {
+	background-color: white;
+	border: 1px solid #222;
+	border-radius: 5px;
+	padding: 20px;
+	width: 400px;
+	
+}
+/* id="signup" 모든자손 fieldset 테두리선 1px 실선 #ccc, 밖 아래여백 30px */
+#signup fieldset {
+	border: 1px solid #ccc;
+	margin-bottom: 30px;
+}
+/* id="signup" 모든자손 fieldset중에 마지막 테두리선 none */
+#signup fieldset:last-of-type {
+	border: none;
+}
+/* id="signup" 모든자손 legend 글자크기 16px,글자 굵기 bold, 안 왼쪽여백 5px */
+/* 안 아래쪽 여백 10px */
+#signup legend {
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-bottom: 10px;
+}
+/* id="signup" 모든자손 ul li 줄간격 30px, 목록스타일 없앰, 안여백 위아래 5px
+	   왼오른쪽 10px, 밖 아래 여백 2px */
+#signup ul li {
+	line-height: 30px;
+	list-style-type: none;
+	padding: 5px 10px;
+	margin-bottom: 2px
+}
+/* id="signup" 모든자손 label 너비 110px, 글자크기 13px, 왼쪽으로 어울림 */
+#signup label {
+	width: 110px;
+	font-size: 13px;
+	float: left;
+}
+/* id="signup" 모든자손 input 제외 [type="submit"]
+	   테두리선 1px 실선 #ccc, 테두리선 둥글게 3px,글자크기 13px,안여백5px,
+	   너비 200px */
+#signup input:not([type=submit], [type=radio]) {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	font-size: 13px;
+	padding: 5px;
+	width: 200px;
+}
+/* id="signup" input[type="submit"] 테두리선 1px 실선 #222, 테두리 둥글게 20px,
+	   글자크기 16px,글자간격 1px,밖여백 자동auto, 안여백 위아래 7px, 왼오른쪽 25px
+	   배치 block */
+#signup input[type=submit] {
+	border: 1px solid #222;
+	border-radius: 20px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	padding: 7px 25px;
+	margin: auto;
+	display: block;
+}
+/* id="signup" input required 테두리선 1px 실선 빨간 */
+#signup	input[required] {
+	border: 1px solid #D5D5D5;
+}
+/* id="signup" input readonly 테두리선 없앰 */
+#signup input[readonly] {
+	border: none;
+}
+/* id="signup" input[type="submit"] :hover  배경색 #222,글자색 흰색 */
+#signup input[type=submit]:hover {
+	background-color: #222;
+	color: white;
+}
+span{
+	font-weight: bolder;
+	font-size: larger;
+}
+</style>
+<body>
+	<form id="signup" action="test15.html" method="get">
+		<span>ITWILL 회원가입</span>
+		<fieldset>
+			<legend>필수입력</legend>
+			<ul>
+				<li><label for="userid">♣ 이름</label> 
+				<input id="userid" name="userid" type="text" required >
+				</li>
+				
+				<li><label for="userid">♣ 아이디</label>
+				 <input id="userid" name="userid" type="text" placeholder="6~10자 영문과 숫자 조합"
+				  required >
+				</li>
+				
+				<li><label for="pwd1">♣ 비밀번호</label> <input id="pwd1"
+					name="pwd1" type="password" placeholder="8~12자 영문,숫자,특수문자" required>
+				</li>
+				
+				<li><label for="pwd2">♣ 성별</label>
+				 <input type="radio" name="room" id="basic"> 남 
+				 <input type="radio"name="room" id="basic"> 여 
+				 <input type="radio" name="room" id="basic"> 기타
+				</li>
+				
+				<li>
+				<label>♣ 생년월일</label> 
+				<input type="date" name="date">
+				</li>
+				
+				<li>
+				<label for="level">♣ 전화번호</label> 
+				<input id="level" name="level" type="text" placeholder="(예시)010-777-8888">
+				</li>
+				<li>
+				<label for="level">♣ e-mail</label> 
+				<input id="level" name="level" type="text"></li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<legend>선택입력</legend>
+			<ul>
+				<li><label for="fullname">♣ 블로그 주소</label> <input id="fullname"
+					name="fullname" type="text" required></li>
+				<li><label> ♣ 학과 선택</label> 
+						<select name="se">
+						<option value="1">산업공학과</option>
+						<option value="2">호텔경영학과</option>
+						<option value="3">컴퓨터공학과</option>
+				</select><br>
+				</li>
+				<li><label>♣ 취미 선택</label> 
+					<select name="hobby">
+						<option value="1">요리</option>
+						<option value="2">발레</option>
+						<option value="3">게임</option>
+					</select><br>
+					</li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<input type="submit" value="가입">
+		</fieldset>
+
+	</form>
+</body>
+</html>

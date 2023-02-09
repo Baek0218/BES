@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test10.html</title>
+<style type="text/css">
+/* CSS 고급선택자 */
+/*  1. 연결선택자 => 하위선택자(자손), 자식선택자, 인접 형제선택, 형제선택*/
+/*  2. 속성선택자 */
+/*  3. 가상클래스와 가상요소 */
+
+/* th, td :동등한 대상 지정 */
+
+/* 하위선택자(자손) id="con" 아래 모든 p태그 */
+/* 상위요소 공백한칸 하위요소(자손) */
+#con p{
+	color: blue;
+}
+/* 자식선택자 id="con" 아래 바로 밑에  p태그*/
+/* 상위요소 > 하위요소(자식) */
+#con > p{
+	background-color: skyblue;
+}
+
+</style>
+</head>
+<body>
+<div id="con">
+	<h1>제목</h1>
+	<p>본문1</p>
+	<div>
+		<p>본문내용1</p>
+		<p>본문내용2</p>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
