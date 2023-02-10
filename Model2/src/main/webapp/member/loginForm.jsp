@@ -16,5 +16,6 @@
 			     <input type = "submit" value="로그인">
 			    
 	</form>
+	<input type="button" value="회원가입" onclick="location.href='MemberInsertForm.me'">
 </body>
 </html>

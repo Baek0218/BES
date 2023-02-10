@@ -21,6 +21,18 @@
   <servlet-name>MemberFrontController</servlet-name>
   <url-pattern>*.me</url-pattern>
   </servlet-mapping>
+
+  <!-- *.bo 가상주소 -> 주소매핑 처리 파일로 연결 -> 처리담당자(서블릿)  -->
+
+  <servlet>
+  		<servlet-name>BoardFrontController</servlet-name>
+  		<servlet-class>com.itwillbs.board.action.BoardFrontController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>BoardFrontController</servlet-name>
+  <url-pattern>*.bo</url-pattern>
+  </servlet-mapping>
   
   
   

@@ -42,8 +42,8 @@
 		}
 	}
 	%>
-<a href="../board/writeForm.jsp">글쓰기</a><br>
-<a href="../board/list.jsp">글목록</a><br>
+<a href="BoardWriteForm.bo">글쓰기</a><br>
+<a href="BoardList.bo">글목록</a><br>
 
 </body>
 </html>

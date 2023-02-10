@@ -185,6 +185,14 @@ public class MemberFrontController extends HttpServlet {
 				e.printStackTrace();
 
 			}
+		} else if(sPath.equals("/MemberList.me")) {
+			action = new MemberList();
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 
 		// 이동 => 이동정보( 주소정보, 이동방식)=> 이동정보 저장하는 자바파일
